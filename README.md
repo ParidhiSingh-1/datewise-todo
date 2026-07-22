@@ -13,6 +13,4 @@ This project organizes tasks **date‑wise**, supports **dark/light themes**, an
 - 🎨 Modern UI with smooth animations
 - 📱 Responsive design for desktop and mobile
 
----
-
 
