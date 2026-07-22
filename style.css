@@ -1,0 +1,103 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  color: #eee;
+}
+
+.container {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark .container { background: #2a2a2a; color: #eee; }
+
+h1 { text-align: center; margin-bottom: 1.5rem; }
+
+.theme-toggle { text-align: center; margin-bottom: 1rem; }
+.theme-toggle button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #667eea;
+  color: #fff;
+  transition: 0.3s;
+}
+body.dark .theme-toggle button { background: #444; }
+.theme-toggle button:hover { opacity: 0.8; }
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  outline: none;
+}
+body.dark .input-section input {
+  border-color: #999;
+  background: #444;
+  color: #eee;
+}
+.input-section button {
+  padding: 10px 15px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.input-section button:hover { background: #764ba2; }
+
+.date-group {
+  margin-bottom: 1.5rem;
+}
+.date-group h2 {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+body.dark .date-group h2 { color: #eee; }
+
+ul { list-style: none; }
+li {
+  background: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+body.dark li { background: #3a3a3a; color: #eee; }
+li.completed { text-decoration: line-through; color: #888; background: #e0e0e0; }
+body.dark li.completed { background: #555; color: #aaa; }
+
+.actions { display: flex; gap: 8px; }
+.actions button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.actions .complete { background: #38b000; color: #fff; }
+.actions .delete { background: #d00000; color: #fff; }
